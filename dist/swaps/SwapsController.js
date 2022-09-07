@@ -442,8 +442,8 @@ class SwapsController extends BaseController_1.default {
             try {
                 const swapDetail = yield SwapsUtil_1.getDEXCreateStatusV2(id);
                 // const testData =   {"actualFromAmount": 0.012, "actualNetworkFee": 0.00018, "actualSwapFee": 0, "actualToAmount": 0.012, "amount": 0.012, "createTime": "2021-02-18T04:39:40.000+00:00", "depositAddress": "0xedcdf4f4ff8374487a1afab8534de3b4dc65a0ac", "depositAddressLabel": "", "depositAddressLabelName": "", "depositReceivedConfirms": 12, "depositRequiredConfirms": 12, "depositTimeout": "2021-02-18T06:39:41.000+00:00", "depositTxId": "0xb1f7a10232dbd5bf642ae6ad32ec9278ce7efe76d4588aa1b213651d544416f1", "depositTxLink": "https://etherscan.io/tx/{txid}", "fromNetwork": "ETH", "id": "dad8608cf4f546188d3581010f3b2264", "networkFee": 0.00018, "networkFeePromoted": true, "status": "WithdrawInProgress", "swapFee": 0, "swapFeeRate": 0, "swapTxId": "0xed88c0e74ee42481f85c415b2e8f6b3c61042b5ae9777edcf50ed2180ef3ee8e", "swapTxLink": "https://bscscan.com/tx/{txid}", "symbol": "ETH", "toAddress": "0xb3b92aE612A4cFBF4f694b7C6c22363fbc493961", "toAddressLabel": "", "toNetwork": "BSC", "updateTime": "2021-02-18T05:49:26.000+00:00", "walletAddress": "0xb3b92aE612A4cFBF4f694b7C6c22363fbc493961", "walletNetwork": "ETH"}
-                if(swapDetail &&  (swapDetail?.status === 'Completed' || swapDetail?.status === 'Cancelled')){
-                    console.log('swapDetail?.status ',swapDetail?.status )
+                if(swapDetail &&  (swapDetail.status === 'Completed' || swapDetail.status === 'Cancelled')){
+                    console.log('swapDetail?.status ',swapDetail.status )
                     this.update({ bridgeStatus: null });
                     return null;
                 }
